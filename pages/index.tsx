@@ -1,7 +1,3 @@
-from zipfile import ZipFile
-
-# Updated trading page with a bold profile header and real trade screenshots
-index_updated = '''\
 import { useState } from 'react'
 
 type Trade = {
@@ -129,11 +125,3 @@ export default function Home() {
     </div>
   )
 }
-'''
-
-# Generate zip for user
-zip_path = "/mnt/data/tailwind-trade-hero-v2.zip"
-with ZipFile(zip_path, 'w') as zipf:
-    zipf.writestr("pages/index.tsx", index_updated)
-
-zip_path
